@@ -6,6 +6,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="nutritionix-api-adapter.js"></script>
+    <script src="pagination.js"></script>
+    <script src="list.js"></script>
+    <script src="index.js"></script>
+    <script src="item.js"></script>
+    <script src="listeners.js"></script>
+    <script src="modal.js"></script>
   </head>
   <body>
 
@@ -20,28 +27,31 @@
     </div>
 
     <!-- results -->
-    <div class="container">
-      <div id="accordion" role="tablist" aria-multiselectable="true">
-        <!-- <div class="card">
-          <div class="card-header" role="tab" id="headingOne">
-            <h5 class="mb-0">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Taco #1
-              </a>
-            </h5>
-          </div>
+    <div class="container" id="results-number"></div>
+    <div class="container" id="search-results"></div>
 
-          <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-            <div class="card-block">
-              Details for Taco
-            </div>
-          </div>
-        </div> -->
-      </div>
+    <div class="container text-center">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination" id="pagination">
+        </ul>
+      </nav>
     </div>
 
+    <!-- modal -->
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title"></h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
-    <script src="nutritionix-api-adapter.js"></script>
-    <script src="index.js"></script>
   </body>
 </html>
